@@ -5,9 +5,9 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private string _sentenceInput;
-    private string _wordInput;
-    private int _result;
+    private static string _sentenceInput;
+    private static string _wordInput;
+    private static int _result;
 
     public RepeatCounter(string sentenceInput, string wordInput, int result)
     {
@@ -15,6 +15,29 @@ namespace WordCounter.Models
       _wordInput = wordInput;
       _result = result;
     }
+
+    // public bool IsString(string sentenceInput, string wordInput)
+    // {
+    //   if (sentenceInput == "string" || wordInput == "string")
+    //   {
+    //     return true;
+    //   }
+    //   else
+    //   {
+    //     return false;
+    //   }
+    // }
+
+  //     bool IsString(string sentenceInput, string wordInput)
+  //     {
+  //     foreach (string input in sentenceInput && string input in sentenceInput);
+  //     {
+  //         if (!string.IsString())
+  //             return false;
+  //     }
+  //
+  //     return true;
+  // }
 
     public int WordSearch(string sentenceInput, string wordInput, int result)
     {
@@ -30,21 +53,21 @@ namespace WordCounter.Models
       return result;
     }
 
-    // public string GetSentence()
-    // {
-    //
-    //   return _sentenceInput;
-    // }
-    //
-    // public string GetWord()
-    // {
-    //
-    //   return _wordInput;
-    // }
-    //
-    // public int GetResult()
-    // {
-    //   return _result;
-    // }
+    public static string GetSentence()
+    {
+
+      return _sentenceInput;
+    }
+
+    public string GetWord()
+    {
+
+      return _wordInput;
+    }
+
+    public int GetResult()
+    {
+      return _result;
+    }
   }
 }

@@ -9,28 +9,22 @@ namespace WordCounter.Tests
   public class RepeatCounterTests
   {
     [TestMethod]
-    public void UserWordTest_TestIfUserSentenceIsAString_String()
+    public void UserWordTest_TestIfUserSentenceIsAString_True()
     {
-      //Arrange
       string testUserSentence = "test sentence";
 
-      //Act
       bool result = testUserSentence is string;
 
-      //Assert
       Assert.AreEqual(true, result);
     }
 
     [TestMethod]
-    public void UserWordTest_TestIfUserWordIsAString_String()
+    public void UserWordTest_TestIfUserWordIsAString_True()
     {
-      //Arrange
       string testUserWord = "testWord";
 
-      //Act
       bool result = testUserWord is string;
 
-      //Assert
       Assert.AreEqual(true, result);
     }
 
@@ -46,5 +40,18 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(2, newCounter.WordSearch(testUserSentence, testUserWord, testResult));
     }
+
+    [TestMethod]
+    public void WordSearch_DetermineIfInputIsAString_True()
+    {
+
+      string testUserSentence = "Dog walker walks do";
+      bool result = testUserSentence is string;
+
+      RepeatCounter testString = new RepeatCounter(testUserSentence);
+
+      Assert.AreEqual("Dog walker walks do", result);
+    }
+
   }
 }
