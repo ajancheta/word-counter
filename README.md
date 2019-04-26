@@ -9,7 +9,7 @@ This is an application that will take both a word and sentence from the user and
 
 ## Specs
 | Behavior | Input | Output |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| ------------- |
 | User inputs a sentence | "The dog owner loves to walk his dog" | *The sentence is stored* "The dog owner loves to walk his dog" |
 | User inputs a word to be counted | "dog" | *The word to be searched is stored* "The dog owner loves to walk his dog" |
 | Application will show result | "The dog owner loves to walk his dog" | "The dog owner loves to walk his dog": The word "dog" was used 2 times.
