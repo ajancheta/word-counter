@@ -32,7 +32,7 @@ namespace WordCounter.Tests
     public void WordSearch_SearchWordAndReturnResult_Int()
     {
 
-      string testUserSentence = "Dog, walker walks dog?!?";
+      string testUserSentence = "Dog, walker walk$ dog?!?";
       string testUserWord = "dog";
       int testResult = 0;
 
@@ -40,18 +40,5 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(2, newCounter.WordSearch(testUserSentence, testUserWord, testResult));
     }
-
-    [TestMethod]
-    public void WordSearch_DetermineIfInputIsAString_True()
-    {
-
-      string testUserSentence = "Dog walker walks do";
-      bool result = testUserSentence is string;
-
-      RepeatCounter testString = new RepeatCounter(testUserSentence);
-
-      Assert.AreEqual("Dog walker walks do", result);
-    }
-
   }
 }

@@ -5,9 +5,9 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private static string _sentenceInput;
-    private static string _wordInput;
-    private static int _result;
+    private string _sentenceInput;
+    private string _wordInput;
+    private int _result;
 
     public RepeatCounter(string sentenceInput, string wordInput, int result)
     {
@@ -16,32 +16,9 @@ namespace WordCounter.Models
       _result = result;
     }
 
-    // public bool IsString(string sentenceInput, string wordInput)
-    // {
-    //   if (sentenceInput == "string" || wordInput == "string")
-    //   {
-    //     return true;
-    //   }
-    //   else
-    //   {
-    //     return false;
-    //   }
-    // }
-
-  //     bool IsString(string sentenceInput, string wordInput)
-  //     {
-  //     foreach (string input in sentenceInput && string input in sentenceInput);
-  //     {
-  //         if (!string.IsString())
-  //             return false;
-  //     }
-  //
-  //     return true;
-  // }
-
     public int WordSearch(string sentenceInput, string wordInput, int result)
     {
-      string[] sentArray = sentenceInput.ToLower().Split(' ', '.', ',', '!', '?');
+      string[] sentArray = sentenceInput.ToLower().Split(' ', '.', ',', '!', '?', '&', '#', '(', ')', '$');
 
       for (int i = 0; i < sentArray.Length; i++)
       {
@@ -53,7 +30,20 @@ namespace WordCounter.Models
       return result;
     }
 
-    public static string GetSentence()
+    public bool RuleOutSymbols(string wordInput)
+    {
+      if (wordInput != str)
+      {
+        return true;
+      }
+
+      else
+      {
+      return false;
+      }
+    }
+
+    public string GetSentence()
     {
 
       return _sentenceInput;
