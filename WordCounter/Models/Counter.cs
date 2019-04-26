@@ -15,5 +15,20 @@ namespace WordCounter.Models
     _wordInput = wordInput;
     _result = result;
   }
+
+  public int WordSearch(string sentenceInput, string wordInput, int result)
+  {
+    string[] sentArray = sentenceInput.ToLower().Split(' ', '.', ',', '!', '?');
+
+    for (int i = 0; i < sentArray.Length; i++)
+    {
+      if (wordInput.ToLower() == sentArray[i])
+      {
+        result ++;
+      }
+    }
+    return result;
+  }
+
   }
 }

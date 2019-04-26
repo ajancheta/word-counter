@@ -33,5 +33,21 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(true, result);
     }
+
+    [TestMethod]
+    public void WordSearch_SearchWordAndReturnResult_Int()
+    {
+      //Arrange
+      int testResult = 0;
+      string testUserSentence = "Dog walker walks dog";
+      string testUserWord = "dog";
+
+      //Act
+      RepeatCounter newCounter = new RepeatCounter (testUserSentence, testUserWord, testResult);
+
+      //Assert
+      Assert.AreEqual(2, newCounter.WordSearch(testUserSentence, testUserWord, testResult));
+    }
+
   }
 }
