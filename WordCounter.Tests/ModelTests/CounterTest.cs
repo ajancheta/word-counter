@@ -43,11 +43,23 @@ namespace WordCounter.Tests
       string testUserWord = "dog";
 
       //Act
-      RepeatCounter newCounter = new RepeatCounter (testUserSentence, testUserWord, testResult);
+      RepeatCounter newCounter = new RepeatCounter(testUserSentence, testUserWord, testResult);
 
       //Assert
       Assert.AreEqual(2, newCounter.WordSearch(testUserSentence, testUserWord, testResult));
     }
 
+    [TestMethod]
+    public void GetSentence_StoreUserSentenceInput_True()
+    {
+      //Arrange
+      string testUserSentence = "Dog walker walks dog";
+
+      //Act
+      RepeatCounter newSentInput = new RepeatCounter(testUserSentence);
+
+      //Assert
+      Assert.AreEqual("Dog walker walks dog", newSentInput.GetSentInput(testUserSentence));
+    }
   }
 }

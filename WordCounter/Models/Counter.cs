@@ -30,5 +30,11 @@ namespace WordCounter.Models
     return result;
   }
 
+  public static string GetSentence()
+  {
+    
+    return _sentenceInput;
+  }
+
   }
 }
