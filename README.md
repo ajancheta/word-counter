@@ -10,15 +10,17 @@ This is an application that will take both a word and sentence from the user and
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| ------------- |
-| User inputs a sentence | "The dog owner loves to walk his dog" | *The sentence is stored* "The dog owner loves to walk his dog" |
-| User inputs a word to be counted | "dog" | *The word to be searched is stored* "The dog owner loves to walk his dog" |
-| Application will show result | "The dog owner loves to walk his dog" | "The dog owner loves to walk his dog": The word "dog" was used 2 times.
+| User inputs a sentence | "Dog owner loves to walk her dog" | *The sentence is stored* "Dog owner loves to walk her dog" |
+| User inputs a word to be counted | "dog" | *The word to be searched is stored* "dog" |
+| Application will covert all uppercase letters to lower case | "DoG OWNER lOVES tO WAlK HiS DoG" | "Dog owner loves to walk her dog" |
+| Application will read the sentence and search for the word while disregarding non-alphabetical characters | "Dog, owner loves to walk her dog?!?"| "Dog owner loves to walk her dog" |
+| Application will show result of how many times the word is in the sentence | "Dog owner loves to walk her dog" | "Dog owner loves to walk her dog": The word "dog" was used 2 times.
 
 ## Setup/Installation Requirements
 
 * Clone this repository "https://github.com/ajancheta/word-counter.git"
 * Open the repository in a preferred text editor such as Atom.
-* Open the file and view in the web browser of preference.
+* This program does not have a built UI yet therefore the program cannot be seen in the terminal.
 
 ## Known Bugs
 
