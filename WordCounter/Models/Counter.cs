@@ -32,9 +32,18 @@ namespace WordCounter.Models
 
   public static string GetSentence()
   {
-    
+
     return _sentenceInput;
   }
 
+  public static string GetWord()
+  {
+
+    return _wordInput;
+  }
+
+  public static int GetResult()
+  {
+    return _result;
   }
 }
