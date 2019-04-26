@@ -9,7 +9,20 @@ namespace WordCounter.Tests
   public class RepeatCounterTests
   {
     [TestMethod]
-    public void UserWordTest_TestIfUserWordStoresAsAString_String()
+    public void UserWordTest_TestIfUserSentenceIsAString_String()
+    {
+      //Arrange
+      string testUserSentence = "test sentence";
+
+      //Act
+      bool result = testUserSentence is string;
+
+      //Assert
+      Assert.AreEqual(true, result);
+    }
+
+    [TestMethod]
+    public void UserWordTest_TestIfUserWordIsAString_String()
     {
       //Arrange
       string testUserWord = "testWord";

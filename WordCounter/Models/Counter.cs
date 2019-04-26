@@ -15,6 +15,5 @@ namespace WordCounter.Models
     _wordInput = wordInput;
     _result = result;
   }
-
   }
 }
