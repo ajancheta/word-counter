@@ -16,6 +16,13 @@ This is an application that will take both a word and sentence from the user and
 | Application will read the sentence and search for the word while disregarding non-alphabetical characters | "Dog, owner loves to walk her dog?!?"| "Dog owner loves to walk her dog" |
 | Application will show result of how many times the word is in the sentence | "Dog owner loves to walk her dog" | "Dog owner loves to walk her dog": The word "dog" was used 2 times.
 
+## Completed additions to the application
+
+- [ ] Front end User Interface
+- [x] Back end logic
+- [x] Test methods for back end logic
+
+
 ## Setup/Installation Requirements
 
 * Clone this repository "https://github.com/ajancheta/word-counter.git"
