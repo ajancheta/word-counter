@@ -30,19 +30,6 @@ namespace WordCounter.Models
       return result;
     }
 
-    public bool RuleOutSymbols(string wordInput)
-    {
-      if (wordInput != str)
-      {
-        return true;
-      }
-
-      else
-      {
-      return false;
-      }
-    }
-
     public string GetSentence()
     {
 
