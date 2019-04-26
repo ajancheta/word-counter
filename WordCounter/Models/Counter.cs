@@ -5,9 +5,9 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private static string _sentenceInput;
-    private static string _wordInput;
-    private static int _result;
+    private string _sentenceInput;
+    private string _wordInput;
+    private int _result;
 
     public RepeatCounter(string sentenceInput, string wordInput, int result)
     {
@@ -30,21 +30,21 @@ namespace WordCounter.Models
       return result;
     }
 
-    public static string GetSentence()
-    {
-
-      return _sentenceInput;
-    }
-
-    public static string GetWord()
-    {
-
-      return _wordInput;
-    }
-
-    public static int GetResult()
-    {
-      return _result;
-    }
+    // public string GetSentence()
+    // {
+    //
+    //   return _sentenceInput;
+    // }
+    //
+    // public string GetWord()
+    // {
+    //
+    //   return _wordInput;
+    // }
+    //
+    // public int GetResult()
+    // {
+    //   return _result;
+    // }
   }
 }

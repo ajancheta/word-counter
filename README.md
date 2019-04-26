@@ -27,19 +27,18 @@ This is an application that will take both a word and sentence from the user and
 
 * Clone this repository "https://github.com/ajancheta/word-counter.git"
 * Open the repository in a preferred text editor such as Atom.
-* This program does not have a built UI yet therefore the program cannot be seen in the terminal.
 
 ## Known Bugs
 
-There are no known bugs.
+There are no known bugs, however, this program does not have a built UI yet therefore the program cannot be seen in the terminal.
 
 ## Support and contact details
 
-Should any problems occur, discover other bugs, or experience issues with viewing, please contact me at ashleyjancheta@gmail.com
+Should any problems occur, discover other bugs, or experience issues with viewing, please contact ashleyjancheta@gmail.com
 
 ## Technologies Used
 
-This application was built with Atom, C#, .Net Core 2.2.106 and Git.
+This application was built with Atom, C#, .NET Core 2.2.106 and Git.
 
 ### License
 
