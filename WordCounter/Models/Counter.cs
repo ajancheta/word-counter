@@ -5,9 +5,9 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private string _sentenceInput;
-    private string _wordInput;
-    private int _result;
+    private static string _sentenceInput;
+    private static string _wordInput;
+    private static int _result;
 
     public RepeatCounter(string sentenceInput, string wordInput, int result)
     {
@@ -19,32 +19,23 @@ namespace WordCounter.Models
     public int WordSearch()
     {
       string[] sentArray = _sentenceInput.Split(' ', '.', ',', '!', '?', '&', '#', '(', ')', '$');
+      string wordCounted = _wordInput;
 
-      for (int i = 0; i < sentArray.Length; i++)
+      foreach (string word in sentArray)
       {
-        if (wordInput.ToLower() == sentArray[i])
+        if (word == wordCounted)
         {
-          result ++;
+          _result ++;
         }
       }
-      return result;
-    }
-
-    public string GetSentence()
-    {
-
-      return _sentenceInput;
-    }
-
-    public string GetWord()
-    {
-
-      return _wordInput;
-    }
-
-    public int GetResult()
-    {
       return _result;
     }
+    
+
+    public static string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
+
+    public static string WordInput { get => _wordInput; set => _wordInput = value; }
+
+    public static int Result { get => _result; set => _result = value; }
   }
 }

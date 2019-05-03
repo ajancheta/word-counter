@@ -1,0 +1,20 @@
+@using WordCounter.Models;
+
+<h1>Lets play</h1>
+
+@if (RepeatCounter.Result == 0)
+{
+  <h3>Word: @RepeatCounter.WordInput</h3>
+  <h3>Sentence: @RepeatCounter.SentenceInput</h3>
+  <h3>Your word does not appear in your sentence</h3>
+}
+
+@if (RepeatCounter.Result != 0)
+{
+  <h3>Word: @RepeatCounter.WordInput</h3>
+  <h3>Sentence: @RepeatCounter.SentenceInput</h3>
+  <h3>Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
+
+}
+
+<h2><a href="/game/new">Try again!</a></h2>

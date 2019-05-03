@@ -16,13 +16,13 @@ namespace WordCounter.Controllers
 
     }
 
-    [HttpPost("/game/")]
+    [HttpPost("/game")]
     public ActionResult Create(string wordInput, string sentenceInput)
     {
        int result = 0;
-       RepeatCounter newGame = new RepeatCounter();
-       newGame.WordSearch(wordInput, sentenceInput);
-       return RedirectToAction("Index", newGame)
+       RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput, result);
+       newGame.WordSearch();
+       return RedirectToAction("Index", newGame);
     }
 
 
