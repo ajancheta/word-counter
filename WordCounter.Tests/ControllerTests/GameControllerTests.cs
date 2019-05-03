@@ -10,28 +10,23 @@ namespace WordCounter.Tests
   public class GameControllerTest
   {
 
+    [TestMethod]
+    public void NewView_HasCorrectModelType_New()
+    {
+      GameController controller = new GameController();
 
-    // [TestMethod]
-    // public void NewView_HasCorrectModelType_New()
-    // {
-    //   ViewResult newView = new GameController().New() as ViewResult;
-    //
-    //   var newGame = newView.ViewData.Model;
-    //
-    //   Assert.IsInstanceOfType(newGame, typeof(ViewResult));
-    // }
+      ActionResult newView = controller.New();
 
-    // [TestMethod]
-    // public void PlayView_HasCorrectModelType_Play()
-    // {
-    //     ActionResult playView = new GameController().Play() as ActionResult;
-    //
-    //     var newPlay = playView.ViewData.Model;
-    //
-    //     Assert.IsInstanceOfType(newPlay, typeof(ActionResult));
-    //
-    // }
+      Assert.IsInstanceOfType(newView, typeof(ViewResult));
+    }
 
+    [TestMethod]
+    public void PlayView_HasCorrectModelType_Play()
+    {
+        GameController controller = new GameController();
+        ActionResult playView = controller.Play();
+        Assert.IsInstanceOfType(playView, typeof(ViewResult));
+    }
 
     [TestMethod]
     public void CreateView_HasCorrectModelType_Create()
