@@ -1,9 +1,23 @@
-<h1>First enter a word then enter a sentence. I will then count how many times that word occurs in that sentence.</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hangman</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
 
-<form action="/game" method="post">
-  <label for="wordInput">Enter word:</label>
-  <input id="wordInput" name="wordInput" type="text" required>
-  <label for="sentenceInput"> Enter a sentence:</label>
-  <input id="sentenceInput" name="sentenceInput" type="text" required>
-  <button type="submit">Go!</button>
-</form>
+  <body>
+    <h1>First enter a word then enter a sentence. I will then count how many times that word occurs in that sentence.</h1>
+
+    <form action="/game" method="post">
+      <label for="wordInput">Enter word:</label>
+      <input id="wordInput" name="wordInput" type="text" required>
+
+      <label for="sentenceInput"> Enter a sentence:</label>
+      <input id="sentenceInput" name="sentenceInput" type="text" required>
+
+      <button type="submit">Go!</button>
+    </form>
+  </body>

@@ -1,20 +1,36 @@
 @using WordCounter.Models;
 
-<h1>Lets play</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hangman</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
 
-@if (RepeatCounter.Result == 0)
-{
-  <h3>Word: @RepeatCounter.WordInput</h3>
-  <h3>Sentence: @RepeatCounter.SentenceInput</h3>
-  <h3>Your word does not appear in your sentence</h3>
-}
+  <body>
+    <h1>Results:</h1>
 
-@if (RepeatCounter.Result != 0)
-{
-  <h3>Word: @RepeatCounter.WordInput</h3>
-  <h3>Sentence: @RepeatCounter.SentenceInput</h3>
-  <h3>Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
+    @if (RepeatCounter.Result == 0)
+    {
+      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
 
-}
+      <h3>Word: @RepeatCounter.WordInput</h3>
 
-<h2><a href="/game/new">Try again!</a></h2>
+      <h3>Your word does not appear in your sentence</h3>
+    }
+
+    @if (RepeatCounter.Result != 0)
+    {
+      <h3>Word: @RepeatCounter.WordInput</h3>
+
+      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
+
+      <h3>Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
+
+    }
+
+    <h3><a href="/game/new">Try again</a></h3>
+  </body>

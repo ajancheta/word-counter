@@ -30,11 +30,10 @@ namespace WordCounter.Models
       }
       return _result;
     }
-    
-
-    public static string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
 
     public static string WordInput { get => _wordInput; set => _wordInput = value; }
+
+    public static string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
 
     public static int Result { get => _result; set => _result = value; }
   }

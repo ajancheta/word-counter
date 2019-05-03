@@ -9,11 +9,17 @@ namespace WordCounter.Controllers
   {
 
     [HttpGet("/game")]
-    public ActionResult Index()
+    public ActionResult Play()
     {
 
       return View();
 
+    }
+
+    [HttpGet("/game/new")]
+    public ActionResult New()
+    {
+      return View();
     }
 
     [HttpPost("/game")]
@@ -24,13 +30,5 @@ namespace WordCounter.Controllers
        newGame.WordSearch();
        return RedirectToAction("Index", newGame);
     }
-
-
-    [HttpPost("/game/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
-
   }
 }
