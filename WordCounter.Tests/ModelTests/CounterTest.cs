@@ -32,11 +32,11 @@ namespace WordCounter.Tests
     public void WordSearch_SearchWordAndReturnResult_Int()
     {
 
-      string testUserSentence = "Dog, dog, dog, walker walk$ Dog?!?";
       string testUserWord = "dog";
+      string testUserSentence = "Dog, dog, dog, walker walk$ Dog?!?";
       int testResult = 0;
 
-      RepeatCounter newCounter = new RepeatCounter(testUserSentence, testUserWord, testResult);
+      RepeatCounter newCounter = new RepeatCounter(testUserWord, testUserSentence, testResult);
 
       Assert.AreEqual(4, newCounter.WordSearch());
     }
