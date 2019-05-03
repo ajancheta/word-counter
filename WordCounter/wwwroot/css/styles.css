@@ -1,20 +1,33 @@
 body {
 
   font-family: 'Gugi', cursive;
-  background-color: blue;
+  background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px;
+  padding: 40px;
   height: 100vh;
 
 }
 
-#welcome {
-  /* font-family: font-family: 'Gugi', cursive; */
-  color: #000000;
+#wordcount {
   text-align: center;
-  font-size: 5em;
-  letter-spacing: 9px;
+  padding-top: 50px;
+  color: pink;
+  letter-spacing: 5px;
+  font-size: 70px;
+}
+
+#welcome {
+  text-align: center;
+  background-image: url("https://media.giphy.com/media/bcAXnpZhenJA5McqfL/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 90px;
+  margin-right: 20%;
+  margin-left: 20%;
+  border-radius: 70%;
+  border: 10px solid #000000;
+  margin-top: 10%;
 }
 
 a {
@@ -24,6 +37,21 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #000000;
-  background-image: url("https://media.giphy.com/media/8FiLPVIONxvJu7fgV4/giphy.gif");
+  color: #FFFFFF;
+}
+
+h1 {
+  color: pink;
+}
+
+h3 {
+  color: #FFFFFF;
+}
+
+label {
+  color: pink;
+}
+
+.playLinks {
+  margin-top: 20%;
 }

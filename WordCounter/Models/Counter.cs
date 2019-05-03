@@ -14,6 +14,7 @@ namespace WordCounter.Models
     {
       _sentenceInput = sentenceInput.ToLower();
       _wordInput = wordInput.ToLower();
+      // _initialInput = (wordInput, sentenceInput);
       _result = 0;
       _userInputs.Add(this);
     }

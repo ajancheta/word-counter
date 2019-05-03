@@ -15,9 +15,9 @@
 
     @if (RepeatCounter.Result == 0)
     {
-      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
+      <h3>Sentence:</h3> <h3>@RepeatCounter.SentenceInput</h3>
 
-      <h3>Word: @RepeatCounter.WordInput</h3>
+      <h3>Word:</h3> <h3>@RepeatCounter.WordInput</h3>
 
       <h3>Your word does not appear in your sentence</h3>
     }
@@ -32,15 +32,11 @@
 
     }
 
-    <h3><a href="/game/new">Try again</a>
+    <h3 class="pinkWords"><a href="/game/new">Try again</a>
     <a href="/">Go Back Home</a></h3>
 
-    <form action="/game/delete" method="post">
+    <form action="/game/view" method="post">
       <button type="submit" name="button">View all entries</button>
-    </form>
-
-    <form action="/game/delete" method="post">
-      <button type="submit" name="button">Clear all entries</button>
     </form>
 
   </body>
