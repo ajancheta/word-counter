@@ -11,14 +11,14 @@ namespace WordCounter.Models
 
     public RepeatCounter(string sentenceInput, string wordInput, int result)
     {
-      _sentenceInput = sentenceInput;
-      _wordInput = wordInput;
-      _result = result;
+      _sentenceInput = sentenceInput.ToLower();
+      _wordInput = wordInput.ToLower();
+      _result = 0;
     }
 
-    public int WordSearch(string sentenceInput, string wordInput, int result)
+    public int WordSearch()
     {
-      string[] sentArray = sentenceInput.ToLower().Split(' ', '.', ',', '!', '?', '&', '#', '(', ')', '$');
+      string[] sentArray = _sentenceInput.Split(' ', '.', ',', '!', '?', '&', '#', '(', ')', '$');
 
       for (int i = 0; i < sentArray.Length; i++)
       {

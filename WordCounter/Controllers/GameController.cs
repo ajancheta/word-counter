@@ -8,65 +8,28 @@ namespace WordCounter.Controllers
   public class GameController : Controller
   {
 
-    [HttpGet("/game/play")]
+    [HttpGet("/game")]
     public ActionResult Play()
     {
 
-      if(Game.GetAll().Count > 0)
-      {
-        List<Game> allCategories = Game.GetAll();
-        Game toPlay = Game.Find(1);
-        return View(toPlay);
-      }else
-      {
-        return RedirectToAction("Index", "Home");
-      }
+      return View();
 
     }
 
-    [HttpPost("/game/play/{letter}")]
-    public ActionResult New(char letter)
+    [HttpPost("/game/")]
+    public ActionResult Create(string wordInput, string sentenceInput)
     {
-       Game playing = Game.Find(1);
-
-       char[] theWord = playing.TheWord.ToCharArray();
-       if(Array.IndexOf(theWord, letter) < 0)
-       {
-         playing.Guesses = playing.Guesses+1;
-       }
-       while(Array.IndexOf(theWord, letter) >= 0)
-       {
-         playing.SetGuessed(Array.IndexOf(theWord, letter), letter);
-         theWord[Array.IndexOf(theWord,letter)] = '_';
-       }
-       Game.RemoveLetter(letter);
-       playing.TheWord = new string(theWord);
-       if(Array.IndexOf(playing.GetGuessed(),'_') < 0)
-       {
-         playing.Winner();
-       }
-       return RedirectToAction("Play");
+       int result = 0;
+       RepeatCounter newGame = new RepeatCounter();
+       newGame.WordSearch(wordInput, sentenceInput);
+       return RedirectToAction("Index", newGame)
     }
 
 
-
-    //
-    [HttpPost("/game/play/again")]
-    public ActionResult Replay()
+    [HttpPost("/game/new")]
+    public ActionResult New()
     {
-      Game.ResetLetters();
-      Game.GetAll().RemoveAt(0);
-      foreach(Game game in Game.GetAll())
-      {
-        game.ReduceId();
-      }
-      if(Game.GetAll().Count > 0)
-      {
-        return RedirectToAction("Play");
-      }else
-      {
-        return RedirectToAction("Index", "Home");
-      }
+      return View();
     }
 
   }
