@@ -1,12 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using WordCounter.Models;
 using System.Collections.Generic;
 using System;
+using WordCounter.Models;
 
 namespace WordCounter.Controllers
 {
   public class GameController : Controller
   {
+    [HttpGet("/game/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
 
     [HttpGet("/game")]
     public ActionResult Play()
@@ -14,12 +19,6 @@ namespace WordCounter.Controllers
 
       return View();
 
-    }
-
-    [HttpGet("/game/new")]
-    public ActionResult New()
-    {
-      return View();
     }
 
     [HttpPost("/game")]
