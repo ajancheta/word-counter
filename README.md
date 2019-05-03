@@ -1,6 +1,6 @@
 # _Word Counter_
 
-#### _C#, Week 1 Independent Project, *04.26.2019*_
+#### _C#, Week 1 Independent Project, *04.26.2019 & 05.03.2019*_
 
 #### By _Ashley J. Ancheta_
 
@@ -18,7 +18,7 @@ This is an application that will take both a word and sentence from the user and
 
 ## Completed additions to the application
 
-- [ ] Front end User Interface
+- [x] Front end User Interface
 - [x] Back end logic
 - [x] Test methods for back end logic
 
