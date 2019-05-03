@@ -8,12 +8,14 @@ namespace WordCounter.Models
     private static string _wordInput;
     private static string _sentenceInput;
     private static int _result;
+    private static List<RepeatCounter> _userInputs = new List<RepeatCounter> {};
 
     public RepeatCounter(string wordInput, string sentenceInput, int result)
     {
       _sentenceInput = sentenceInput.ToLower();
       _wordInput = wordInput.ToLower();
       _result = 0;
+      _userInputs.Add(this);
     }
 
     public int WordSearch()
@@ -36,5 +38,15 @@ namespace WordCounter.Models
     public static string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
 
     public static int Result { get => _result; set => _result = value; }
+
+    public static List<RepeatCounter> GetAll()
+    {
+      return _userInputs;
+    }
+
+    public static void ClearAll()
+    {
+      _userInputs.Clear();
+    }
   }
 }

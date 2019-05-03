@@ -35,5 +35,21 @@ namespace WordCounter.Tests
         IActionResult createView = controller.Create("word", "word in word");
         Assert.IsInstanceOfType(createView, typeof(RedirectToActionResult));
     }
+
+    [TestMethod]
+    public void ViewEntries_HasCorrectModelType_ViewAll()
+    {
+        GameController controller = new GameController();
+        IActionResult viewEntries = controller.ViewInput();
+        Assert.IsInstanceOfType(viewEntries, typeof(ViewResult));
+    }
+
+    [TestMethod]
+    public void DeleteEntries_HasCorrectModelType_DeleteAll()
+    {
+        GameController controller = new GameController();
+        IActionResult deleteEntries = controller.DeleteAll();
+        Assert.IsInstanceOfType(deleteEntries, typeof(ViewResult));
+    }
   }
 }

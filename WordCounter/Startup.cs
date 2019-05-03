@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,7 +39,7 @@ namespace WordCounter
 
       app.Run(async (context) =>
       {
-      await context.Response.WriteAsync("Error");
+      await context.Response.WriteAsync("Error!");
       });
     }
   }

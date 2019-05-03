@@ -16,9 +16,7 @@ namespace WordCounter.Controllers
     [HttpGet("/game")]
     public ActionResult Play()
     {
-
       return View();
-
     }
 
     [HttpPost("/game")]
@@ -28,6 +26,20 @@ namespace WordCounter.Controllers
        RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput, result);
        newGame.WordSearch();
        return RedirectToAction("Index", newGame);
+    }
+
+    [HttpPost("/game/view")]
+    public ActionResult ViewInput()
+    {
+      List<RepeatCounter> inputBank = RepeatCounter.GetAll();
+      return View(inputBank);
+    }
+
+    [HttpPost("/game/delete")]
+    public ActionResult DeleteAll()
+    {
+      RepeatCounter.ClearAll();
+      return View();
     }
   }
 }

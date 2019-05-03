@@ -23,3 +23,5 @@
 /Users/ashleyancheta/Desktop/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.Views.pdb
 /Users/ashleyancheta/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.Views.pdb
 /Users/ashleyancheta/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csproj.CopyComplete
+/Users/ashleyancheta/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/Game/DeleteAll.g.cshtml.cs
+/Users/ashleyancheta/Desktop/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/Game/ViewInput.g.cshtml.cs
