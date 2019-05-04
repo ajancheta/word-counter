@@ -28,18 +28,13 @@ namespace WordCounter.Controllers
        return RedirectToAction("Index", newGame);
     }
 
-    [HttpPost("/game/view")]
-    public ActionResult ViewInput()
-    {
-      List<RepeatCounter> inputBank = RepeatCounter.GetAll();
-      return View(inputBank);
-    }
-
     [HttpPost("/game/delete")]
-    public ActionResult DeleteAll()
+    public ActionResult DeleteAll(string wordInput, string sentenceInput)
     {
+      int result = 0;
+      RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput, result);
       RepeatCounter.ClearAll();
-      return View();
+      return RedirectToAction("Index", newGame);
     }
   }
 }

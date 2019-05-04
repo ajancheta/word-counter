@@ -19,10 +19,10 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-          <a class="isDisabled" href="about-FAQ.html">Word Counter</a>
+          <a class="nav-link" href="/game/new">Word Counter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/game/view">Entries</a>
+            <a class="isDisabled" href="/game">Results</a>
           </li>
         </ul>
       </div>
@@ -50,12 +50,10 @@
 
     }
 
-    <h3 class="results"><a href="/game/new">TRY AGAIN</a><span> |</span>
-    <a href="/">GO HOME</a><span> |</span>
-    <a href="/game/view">VIEW ENTRIES</a></h3>
+    <!-- <h3>@RepeatCounter.GetAll()</h3> -->
 
-    <!-- <form action="/game/view" method="post">
-      <button type="submit" name="button">View all entries</button>
-    </form> -->
+
+    <h3 class="results"><a href="/game/new">TRY AGAIN</a><span> |</span>
+    <a href="/">GO HOME</a><span> |</span><a href="/game/delete">CLEAR ALL</a>
 
   </body>
