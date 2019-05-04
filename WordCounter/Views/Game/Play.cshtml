@@ -12,7 +12,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg" class="sticky-top" id="indexNav">
-      <img src="https://image.flaticon.com/icons/svg/1299/1299903.svg" width="40" height="40" alt="hashtag">
+      <img src="https://image.flaticon.com/icons/png/512/1045/1045903.png" width="40" height="40" alt="hashtag">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -28,17 +28,16 @@
       </div>
     </nav>
 
-    <h1 class="welcome">WORD COUNTER</h1>
-
-    <h1>Results:</h1>
+    <h1 class="welcome">WORD COUNTER RESULTS</h1>
 
     @if (RepeatCounter.Result == 0)
     {
-      <h3>Sentence:</h3> <h3>@RepeatCounter.SentenceInput</h3>
+      <h3>Word: @RepeatCounter.WordInput</h3>
 
-      <h3>Word:</h3> <h3>@RepeatCounter.WordInput</h3>
+      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
 
-      <h3>Your word does not appear in your sentence</h3>
+
+      <h3 class="results">Your word does not appear in your sentence</h3>
     }
 
     @if (RepeatCounter.Result != 0)
@@ -47,15 +46,16 @@
 
       <h3>Sentence: @RepeatCounter.SentenceInput</h3>
 
-      <h3>Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
+      <h3 class="results">Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
 
     }
 
-    <h3 class="pinkWords"><a href="/game/new">Try again</a>
-    <a href="/">Go Back Home</a></h3>
+    <h3 class="results"><a href="/game/new">TRY AGAIN</a><span> |</span>
+    <a href="/">GO HOME</a><span> |</span>
+    <a href="/game/view">VIEW ENTRIES</a></h3>
 
-    <form action="/game/view" method="post">
+    <!-- <form action="/game/view" method="post">
       <button type="submit" name="button">View all entries</button>
-    </form>
+    </form> -->
 
   </body>
