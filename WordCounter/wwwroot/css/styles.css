@@ -1,3 +1,47 @@
+/* nav bar css -----------> */
+
+#indexNav {
+  overflow: hidden;
+  background-color: pink;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 0 0 0
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-bottom: 2px;
+  opacity: 0.8;
+  z-index: 50;
+}
+
+#indexNav a {
+  text-align: center;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.isDisabled {
+  color: #000000;
+  text-decoration: none;
+  pointer-events: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#indexNav a:hover {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+/* nav bar css end ---------> */
+
 body {
 
   font-family: 'Gugi', cursive;
@@ -9,7 +53,7 @@ body {
 
 }
 
-#wordcount {
+.welcome {
   text-align: center;
   padding-top: 50px;
   color: pink;
@@ -17,27 +61,45 @@ body {
   font-size: 70px;
 }
 
-#welcome {
+#firstClick {
+  letter-spacing: 5px;
+}
+
+.initialize {
   text-align: center;
-  background-image: url("https://media.giphy.com/media/bcAXnpZhenJA5McqfL/giphy.gif");
+  background-image: url("https://media.giphy.com/media/1pmatQ3LcP5XFYxSWF/giphy.gif");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 90px;
+  /* padding: 90px; */
+  padding-top: 205px;
+  padding-bottom: 205px;
   margin-right: 20%;
   margin-left: 20%;
-  border-radius: 70%;
+  border-radius: 68%;
   border: 10px solid #000000;
-  margin-top: 10%;
+  margin-top: 2%;
+
 }
 
 a {
   color: pink;
   /* font-size: 3em; */
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  font-weight: bold;
   color: #FFFFFF;
+  text-decoration: none;
+}
+
+.instruction {
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+label {
+  padding-bottom: 10px;
 }
 
 h1 {
