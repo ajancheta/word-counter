@@ -37,7 +37,7 @@
       <h3>Sentence: @RepeatCounter.SentenceInput</h3>
 
 
-      <h3 class="results">Your word does not appear in your sentence</h3>
+      <h3 class="results">Your word "@RepeatCounter.WordInput" does not appear in the sentence that you entered.</h3>
     }
 
     @if (RepeatCounter.Result != 0)
@@ -46,14 +46,9 @@
 
       <h3>Sentence: @RepeatCounter.SentenceInput</h3>
 
-      <h3 class="results">Your word appears @RepeatCounter.Result time(s) in that sentence.</h3>
+      <h3 class="results">Your word "@RepeatCounter.WordInput" appears @RepeatCounter.Result time(s) in the sentence that you entered.</h3>
 
     }
-
-    <!-- <h3>@RepeatCounter.GetAll()</h3> -->
-
-
-    <h3 class="results"><a href="/game/new">TRY AGAIN</a><span> |</span>
-    <a href="/">GO HOME</a><span> |</span><a href="/game/delete">CLEAR ALL</a>
+    <!-- |</span><a href="/game/delete">CLEAR ALL</a> -->
 
   </body>

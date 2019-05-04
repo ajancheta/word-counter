@@ -40,5 +40,42 @@ namespace WordCounter.Tests
 
       Assert.AreEqual(4, newCounter.WordSearch());
     }
+
+    [TestMethod]
+    public void GetId_GameInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string testUserWord = "dog";
+      string testUserSentence = "dog dog and dog";
+      int testResult = 0;
+
+      RepeatCounter newCounter = new RepeatCounter(testUserWord, testUserSentence, testResult);
+
+
+      int result = newCounter.GetId();
+
+      Assert.AreEqual(3, result);
+    }
+
+    //failed test method
+    // [TestMethod]
+    // public void Find_ReturnsCorrectCounter_RepeatCounter()
+    // {
+    //
+    //   string testUserWord = "hi";
+    //   string testUserSentence = "dog dog and dog";
+    //   int testResult = 0;
+    //
+    //   RepeatCounter newCounter = new RepeatCounter(testUserWord, testUserSentence, testResult);
+    //
+    //   string testUserWordTwo = "dog";
+    //   string testUserSentenceTwo = "dog dog and dog";
+    //   int testResultTwo = 3;
+    //
+    //   RepeatCounter newCounterTwo = new RepeatCounter(testUserWordTwo, testUserSentenceTwo, testResultTwo);
+    //
+    //   RepeatCounter result = RepeatCounter.Find(1);
+    //
+    //   Assert.AreEqual(newCounter, result);
+    // }
   }
 }
