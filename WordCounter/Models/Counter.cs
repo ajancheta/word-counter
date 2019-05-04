@@ -10,15 +10,18 @@ namespace WordCounter.Models
     private static int _result;
     private static List<RepeatCounter> _userInputs = new List<RepeatCounter> {};
     private static int _id;
+    private string _initialWord;
+    private string _initialSent;
 
     public RepeatCounter(string wordInput, string sentenceInput, int result)
     {
       _sentenceInput = sentenceInput.ToLower();
       _wordInput = wordInput.ToLower();
-      // _initialInput = (wordInput, sentenceInput);
       _result = 0;
       _userInputs.Add(this);
       _id = _userInputs.Count;
+      _initialWord = wordInput;
+      _initialSent = sentenceInput;
     }
 
     public int WordSearch()
@@ -42,6 +45,10 @@ namespace WordCounter.Models
 
     public static int Result { get => _result; set => _result = value; }
 
+    public string WordEntry { get => _initialWord; set => _initialWord = value; }
+
+    public string SentEntry { get => _initialSent; set => _initialSent = value; }
+
     public static List<RepeatCounter> GetAll()
     {
       return _userInputs;
@@ -56,10 +63,10 @@ namespace WordCounter.Models
     {
       _userInputs.Clear();
     }
-    //
-    // public static RepeatCounter Find(int searchId)
-    // {
-    //   return _userInputs[searchId-1];
-    // }
+
+    public static RepeatCounter Find(int searchId)
+    {
+      return _userInputs[searchId-1];
+    }
   }
 }
