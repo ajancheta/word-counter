@@ -7,34 +7,39 @@ namespace WordCounter.Controllers
 {
   public class GameController : Controller
   {
+
+    [HttpGet("/game")]
+    public ActionResult Index()
+    {
+      List<RepeatCounter> allGames = RepeatCounter.GetAll();
+      return View(allGames);
+    }
+
     [HttpGet("/game/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpGet("/game")]
-    public ActionResult Play()
+    [HttpPost("/game/show")]
+    public ActionResult Create(string wordInput, string sentenceInput)
+    {
+       RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput);
+      //  newGame.WordSearch();
+       return RedirectToAction("Index");
+    }
+
+    [HttpGet("/game/show")]
+    public ActionResult Show()
     {
       return View();
     }
 
-    [HttpPost("/game")]
-    public ActionResult Create(string wordInput, string sentenceInput)
-    {
-       int result = 0;
-       RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput, result);
-       newGame.WordSearch();
-       return RedirectToAction("Index", newGame);
-    }
-
     [HttpPost("/game/delete")]
-    public ActionResult DeleteAll(string wordInput, string sentenceInput)
+    public ActionResult DeleteAll()
     {
-      int result = 0;
-      RepeatCounter newGame = new RepeatCounter(wordInput, sentenceInput, result);
       RepeatCounter.ClearAll();
-      return RedirectToAction("Index", newGame);
+      return RedirectToAction("Index");
     }
   }
 }

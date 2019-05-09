@@ -28,38 +28,28 @@
       </div>
     </nav>
 
-    <h1 class="welcome">WORD COUNTER RESULTS</h1>
+    <h1 class="welcome">WORD COUNTERS HOME</h1>
 
-    @if (RepeatCounter.Result == 0)
-    {
-      <h3>Word: @RepeatCounter.WordInput</h3>
-
-      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
-
-
-      <h3 class="results">Your word "@RepeatCounter.WordInput" does not appear in the sentence that you entered.</h3>
-    }
-
-    @if (RepeatCounter.Result != 0)
-    {
-      <h3>Word: @RepeatCounter.WordInput</h3>
-
-      <h3>Sentence: @RepeatCounter.SentenceInput</h3>
-
-      <h3 class="results">Your word "@RepeatCounter.WordInput" appears @RepeatCounter.Result time(s) in the sentence that you entered.</h3>
-
-    }
-
-    @*@if (@Model.Count == 0)
+    @if (@Model.Count == 0)
     {
       <h1>No words have been added yet!</h1>
     }
 
-    @foreach (var RepeatCounter in Model)
+    @if (Model.Count != 0)
     {
-      <h3>@RepeatCounter.WordEntry</h3>
-      <h3>@RepeatCounter.SentEntry</h3>
-    }*@
-        <!-- |</span><a href="/game/delete">CLEAR ALL</a> -->
+      @foreach (var counter in @Model)
+      {
+        <h3>Word: @counter.WordInput</h3>
+
+        <h3>Sentence: @counter.SentenceInput</h3>
+
+        <h3 class="results">Your word "@counter.WordInput" appears @counter.WordSearch() time(s) in the sentence that you entered.</h3>
+      }
+    
+    }
+    
+    <form action="/game/delete" method="post">
+    <button type="submit">CLEAR ALL</button>
+    </form>
 
   </body>
