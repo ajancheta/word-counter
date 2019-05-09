@@ -5,19 +5,18 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private static string _wordInput;
-    private static string _sentenceInput;
-    private static int _result;
+    private string _wordInput;
+    private string _sentenceInput;
+    private int _result;
     private static List<RepeatCounter> _userInputs = new List<RepeatCounter> {};
-    private static int _id;
+    private int _id;
     private string _initialWord;
     private string _initialSent;
 
-    public RepeatCounter(string wordInput, string sentenceInput, int result)
+    public RepeatCounter(string wordInput, string sentenceInput)
     {
       _sentenceInput = sentenceInput.ToLower();
       _wordInput = wordInput.ToLower();
-      _result = 0;
       _userInputs.Add(this);
       _id = _userInputs.Count;
       _initialWord = wordInput;
@@ -26,10 +25,11 @@ namespace WordCounter.Models
 
     public int WordSearch()
     {
+      int result = 0;
       string[] sentArray = _sentenceInput.Split(' ', '.', ',', '!', '?', '&', '#', '(', ')', '$');
       string wordCounted = _wordInput;
 
-      foreach (string word in sentArray)
+      foreach(string word in sentArray)
       {
         if (word == wordCounted)
         {
@@ -39,11 +39,9 @@ namespace WordCounter.Models
       return _result;
     }
 
-    public static string WordInput { get => _wordInput; set => _wordInput = value; }
+    public string WordInput { get => _wordInput; set => _wordInput = value; }
 
-    public static string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
-
-    public static int Result { get => _result; set => _result = value; }
+    public string SentenceInput { get => _sentenceInput; set => _sentenceInput = value; }
 
     public string WordEntry { get => _initialWord; set => _initialWord = value; }
 
